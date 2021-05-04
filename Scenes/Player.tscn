@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[sub_resource type="CapsuleShape" id=4]
+[sub_resource type="CapsuleShape" id=1]
 radius = 0.5
 
 [sub_resource type="CapsuleMesh" id=2]
@@ -11,10 +11,11 @@ radial_segments = 48
 size = Vector3( 0.2, 0.5, 0.5 )
 
 [node name="Player" type="KinematicBody"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 1, 0 )
-shape = SubResource( 4 )
+shape = SubResource( 1 )
 
 [node name="CapsuleMesh" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 1, 0 )
