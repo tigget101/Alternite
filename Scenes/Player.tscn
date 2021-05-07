@@ -32,3 +32,7 @@ material/0 = null
 
 [node name="Position3D" type="Position3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 5.43069e-07, -9.93411e-08, 3.33333, 0, 3.33333, 9.93411e-08, -3.33333, -1.61847e-14, 5.43069e-07, 9.66666, 3, 1.19209e-06 )
+visible = false

@@ -2,13 +2,18 @@ extends KinematicBody
 
 onready var camera = get_parent().get_node("Camera")
 
-export var max_speed = 5
+export var max_speed = 3.5
 export var friction = 10
 export var speed = 1
 export var acceleration = 0.5
 
+
+
 var move_vector = Vector3.ZERO
 var cursor_pos = Vector3.ZERO
+var gravity = 4
+var jump = 2.2
+var capncrunch = Vector3()
 
 func get_input():
 	var input = Vector3(
@@ -20,7 +25,11 @@ func get_input():
 	return input
 	
 func _process(delta):
-	pass
+	if not is_on_floor():
+		capncrunch.y -= gravity * delta
+	if Input.is_action_just_pressed("jump"):
+		capncrunch.y = jump
+	move_and_slide(capncrunch, Vector3.UP)
 
 func _physics_process(delta):
 	var input = get_input()
