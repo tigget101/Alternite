@@ -13,7 +13,8 @@ var move_vector = Vector3.ZERO
 var cursor_pos = Vector3.ZERO
 var gravity = 4
 var jump = 2.2
-var capncrunch = Vector3()
+var sproing = Vector3()
+var max_jump = 0
 
 func get_input():
 	var input = Vector3(
@@ -25,11 +26,22 @@ func get_input():
 	return input
 	
 func _process(delta):
+	if is_on_floor():
+		max_jump = 0
 	if not is_on_floor():
-		capncrunch.y -= gravity * delta
-	if Input.is_action_just_pressed("jump"):
-		capncrunch.y = jump
-	move_and_slide(capncrunch, Vector3.UP)
+		sproing.y -= gravity * delta
+	if Input.is_action_just_pressed("jump") and is_on_floor():
+		if max_jump == 0:
+			sproing.y = jump
+			max_jump == 1
+	
+	if Input.is_action_just_pressed("jump") and not is_on_floor():
+		if max_jump == 1:
+			sproing.y = jump
+			max_jump = 2
+			
+	move_and_slide(sproing, Vector3.UP)
+	
 
 func _physics_process(delta):
 	var input = get_input()
