@@ -35,3 +35,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 5.34282e-07, -1.98682e-07, 3.33333, -4.98339e-08, 3.33333, 1.98682e-07, -3.33333, -4.98339e-08, 5.34282e-07, 8.66666, 2.66667, 7.94728e-07 )
+visible = false
