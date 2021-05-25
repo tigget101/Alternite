@@ -9,7 +9,7 @@ export var acceleration = 10
 var move_vector = Vector3.ZERO
 var cursor_pos = Vector3.ZERO
 var gravity = 9.8
-var jump = 4.5
+var jump = 5
 var fall = Vector3()
 var direction = Vector3()
 var velocity = Vector3()
@@ -27,14 +27,20 @@ func _process(delta):
 	
 	if Input.is_action_pressed("ui_left"):
 		direction += transform.basis.z
+		$CapsuleMesh.rotation_degrees.y = 0
 		
 	elif Input.is_action_pressed("ui_right"):
 		direction -= transform.basis.z
+		$CapsuleMesh.rotation_degrees.y = 180
+		
+		
 		
 	direction = direction.normalized()
 	velocity = velocity.linear_interpolate(direction * speed, acceleration * delta)
 	velocity = move_and_slide(velocity, Vector3.UP)
 	move_and_slide(fall, Vector3.UP)
+	
+
 
 		
 
