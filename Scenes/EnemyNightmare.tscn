@@ -15,7 +15,6 @@ radius = 6.0
 height = 1.0
 
 [node name="EnemyNightmare" type="KinematicBody"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
 script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
@@ -28,7 +27,7 @@ mesh = SubResource( 2 )
 material/0 = null
 
 [node name="MeshInstance" type="MeshInstance" parent="CapsuleMesh"]
-transform = Transform( 0.35, 0, 0, 0, 0.56, 1.13025e-08, 0, -1.26588e-08, 0.5, 0, 2.3, -1.19209e-07 )
+transform = Transform( -0.35, 5.96046e-08, -1.33227e-15, -2.23517e-08, -0.56, 4.37114e-08, 9.77026e-16, 4.89567e-08, 0.5, 0, -2, 0 )
 mesh = SubResource( 3 )
 material/0 = null
 

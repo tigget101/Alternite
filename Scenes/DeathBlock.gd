@@ -25,5 +25,9 @@ func _ready():
 
 
 func _on_Area_body_entered(body):
-	get_tree().reload_current_scene()
-	pass # Replace with function body.
+	if body.name == "Player":
+		get_tree().reload_current_scene()
+	else:
+		body.queue_free()
+		pass
+	
