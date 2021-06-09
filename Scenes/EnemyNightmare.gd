@@ -12,8 +12,7 @@ func _ready():
 	
 func _process(delta):
 	if not is_on_floor():
-		#
-		print("nacho nick hates doritos")
+		#print("nacho nick hates doritos")
 		fall.y -= gravity * delta
 		move_and_slide(fall, Vector3.UP)
 

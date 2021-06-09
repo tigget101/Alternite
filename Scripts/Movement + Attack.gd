@@ -1,6 +1,7 @@
 extends KinematicBody
 
 onready var camera = get_parent().get_node("Camera")
+onready var projectile = preload("res://Scenes/PlayerFire.tscn")
 
 export var max_speed = 3.5
 export var friction = 10
@@ -14,6 +15,7 @@ var fall = Vector3()
 var direction = Vector3()
 var velocity = Vector3()
 var jump_count = 0
+var can_fire = true
 
 func _process(delta):
 	
@@ -33,6 +35,14 @@ func _process(delta):
 	elif Input.is_action_pressed("ui_left"):
 		direction -= transform.basis.x
 		$CapsuleMesh.rotation_degrees.y = 180
+		
+	if Input.is_action_pressed("shoot") and can_fire:
+		can_fire = false
+		var new_projectile = projectile.instance()
+		new_projectile.global_transform = $Position3D.global_transform
+		get_parent().add_child(new_projectile)
+		
+		
 		
 		
 		
@@ -60,3 +70,12 @@ func _ready():
 			
 			
 		
+
+
+
+	
+
+
+func _on_ProjectileTimer_timeout():
+	can_fire = true
+	

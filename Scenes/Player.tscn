@@ -32,3 +32,7 @@ material/0 = null
 
 [node name="Position3D" type="Position3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1 )
+
+[node name="ProjectileTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="ProjectileTimer" to="." method="_on_ProjectileTimer_timeout"]
