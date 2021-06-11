@@ -46,6 +46,7 @@ func _process(delta):
 		
 		
 		
+		
 	direction = direction.normalized()
 	velocity = velocity.linear_interpolate(direction * speed, acceleration * delta)
 	velocity = move_and_slide(velocity, Vector3.UP)
