@@ -24,6 +24,7 @@ func _physics_process(delta):
 			look_at(player.global_transform.origin, Vector3.UP)
 			rotation.x = 0
 			rotation.z = 0
+			translation.z = 0
 			move_and_slide(move_vec * move_speed * delta, Vector3.UP)
 			
 		else:
