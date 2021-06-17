@@ -18,6 +18,11 @@ config/name="Alternite"
 run/main_scene="res://Scenes/Level.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+PlayerStats="*res://Scripts/Player_Stats.gd"
+UserInterface="*res://Scenes/UserInterface.tscn"
+
 [input]
 
 jump={

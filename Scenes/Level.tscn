@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Platform1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/GameCamera.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/DeathBlock.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/EnemyNightmare.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/TempWall.tscn" type="PackedScene" id=6]
 
 [node name="Level" type="Spatial"]
 
@@ -53,3 +54,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.3, -8.7, 0 )
 
 [node name="EnemyNightmare" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1.30385e-08, 0, 0.2, 0, 0.2, 0, -0.2, 0, 1.30385e-08, 3.8, 0, 0 )
+
+[node name="TempWall" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.2 )
