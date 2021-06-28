@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Resources/pixil-frame-0 (2).png" type="Texture" id=1]
 [ext_resource path="res://Resources/health_orb.png" type="Texture" id=2]
@@ -7,17 +7,10 @@
 [ext_resource path="res://Scenes/UserInterface.gd" type="Script" id=5]
 
 [sub_resource type="DynamicFont" id=1]
-size = 21
-font_data = ExtResource( 3 )
-
-[sub_resource type="DynamicFont" id=2]
 size = 19
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=3]
-font_data = ExtResource( 3 )
-
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.721569, 0.027451, 0.027451, 1 )
 border_width_left = 1
 border_width_top = 1
@@ -29,7 +22,7 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 1, 1, 1, 0.313726 )
 border_width_left = 4
 border_width_top = 4
@@ -41,8 +34,14 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[node name="Control" type="CanvasLayer"]
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 3 )
+
+[node name="Control" type="Control"]
 script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="health_orb" type="Sprite" parent="."]
 position = Vector2( 65.346, 75.9164 )
@@ -55,55 +54,43 @@ scale = Vector2( 1.65238, 1.64288 )
 texture = ExtResource( 1 )
 
 [node name="Light_Count" type="Label" parent="."]
-margin_left = 818.051
-margin_top = 20.4317
-margin_right = 902.051
-margin_bottom = 42.4317
+margin_left = 839.317
+margin_top = 17.0
+margin_right = 905.317
+margin_bottom = 37.0
 custom_fonts/font = SubResource( 1 )
-text = "100%"
-max_lines_visible = 3
+text = "100"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Life_Count" type="Label" parent="."]
-margin_left = 111.515
-margin_top = 16.4983
-margin_right = 244.515
-margin_bottom = 36.4983
-custom_fonts/font = SubResource( 2 )
-text = "100/100"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="Life_Count"]
-anchor_top = -1.095
-anchor_bottom = -1.095
-margin_left = 99.1578
-margin_top = 76.3975
-margin_right = 160.158
-margin_bottom = 123.397
-custom_fonts/font = SubResource( 3 )
-text = "x3"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Heart" type="Sprite" parent="Life_Count/Label"]
-position = Vector2( 8.60211, 28.8776 )
-scale = Vector2( 1.6324, 1.69847 )
-texture = ExtResource( 4 )
 
 [node name="Life_Bar" type="ProgressBar" parent="."]
-margin_left = 119.017
-margin_top = 42.9966
-margin_right = 243.017
-margin_bottom = 63.9966
-custom_styles/fg = SubResource( 4 )
-custom_styles/bg = SubResource( 5 )
+margin_left = 118.073
+margin_top = 11.8488
+margin_right = 242.073
+margin_bottom = 33.8488
+custom_styles/fg = SubResource( 2 )
+custom_styles/bg = SubResource( 3 )
 value = 100.0
 percent_visible = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Lives_Count" type="Label" parent="."]
+anchor_top = -1.095
+anchor_bottom = -1.095
+margin_left = 204.211
+margin_top = 45.5729
+margin_right = 265.211
+margin_bottom = 179.573
+custom_fonts/font = SubResource( 4 )
+text = "x3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Heart" type="Sprite" parent="Lives_Count"]
+position = Vector2( 8.60211, 28.8776 )
+scale = Vector2( 1.6324, 1.69847 )
+texture = ExtResource( 4 )

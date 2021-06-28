@@ -1,4 +1,4 @@
-extends Area
+extends Node
 
 
 # Declare member variables here. Examples:
@@ -8,7 +8,7 @@ extends Area
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	UserInterface.hide()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -16,20 +16,6 @@ func _ready():
 #	pass
 
 
-
-
-
-
-
-
-
-
-func _on_Area_body_entered(body):
-	if body.name == "Player":
-		get_tree().reload_current_scene()
-		PlayerStats.change_lives(-1)
-		PlayerStats.reset()
-	else:
-		body.queue_free()
-		pass
-	
+func _on_Button_pressed():
+	get_tree().change_scene("res://Scenes/Level.tscn")
+	UserInterface.show()

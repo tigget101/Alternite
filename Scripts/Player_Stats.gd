@@ -9,7 +9,7 @@ var max_lives
 
 func _ready():
 	life = 100
-	max_life = 150
+	max_life = 100
 	light = 100
 	max_light = 100
 	lives = 3
@@ -38,3 +38,7 @@ func get_lives():
 	
 func has_ammo():
 	return light > 0
+	
+func reset():
+	life = max_life
+	light = max_light

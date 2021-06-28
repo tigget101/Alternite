@@ -17,6 +17,7 @@ var velocity = Vector3()
 var jump_count = 0
 var can_fire = true
 var facing = "right"
+
 func _process(delta):
 	
 	direction = direction.normalized()
@@ -43,7 +44,11 @@ func _process(delta):
 		direction -= transform.basis.x
 		$CapsuleMesh.rotation_degrees.y = 180
 		facing = "left"
-	if Input.is_action_pressed("shoot") and can_fire:
+	if Input.is_action_pressed("shoot") and can_fire and PlayerStats.has_ammo():
+		
+		PlayerStats.change_light(-1)
+		check_hit()
+		
 		can_fire = false
 		var new_projectile = projectile.instance()
 		new_projectile.global_transform = $CapsuleMesh/PointDirection/Position3D.global_transform
@@ -56,8 +61,26 @@ func _process(delta):
 		$ProjectileTimer.set_wait_time(0.5)
 		$ProjectileTimer.start()
 		
+	if PlayerStats.get_life() <= 0:
+		get_tree().reload_current_scene()
+		PlayerStats.change_lives(-1)
+		PlayerStats.reset()
+		
+	if PlayerStats.get_lives() <= 0:
+		get_tree().quit()
+		
+	
+
+
+		
+func check_hit():
+	if $HitScan.is_colliding():
+		print($HitScan.get_collider().filename)
+		if $HitScan.get_collider().filename == "res://Scenes/EnemyNightmare.tscn":
+			$HitScan.get_collider().hit_nightmare()
 		
 		
+			
 
 		
 	
@@ -98,3 +121,11 @@ func _ready():
 func _on_ProjectileTimer_timeout():
 	can_fire = true
 	
+
+
+func _on_Area_body_entered(body):
+	if body.filename == "res://Scenes/EnemyNightmare.tscn":
+		PlayerStats.change_life(-40)
+		
+		
+	pass # Replace with function body.

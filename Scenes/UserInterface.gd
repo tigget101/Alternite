@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Control
 
 
 # Declare member variables here. Examples:
@@ -11,6 +11,9 @@ func _ready():
 	$Life_Bar.max_value = PlayerStats.max_life
 func _process(delta):
 	$Life_Bar.value = PlayerStats.get_life()
+	$Light_Count.text = str(PlayerStats.get_light())
+	$Lives_Count.text = str(PlayerStats.get_lives())
+	
 
 
 

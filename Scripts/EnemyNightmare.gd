@@ -4,17 +4,20 @@ var player
 var follow_player = false
 var move_speed = 25
 var move_vec = Vector3.ZERO
-var gravity = 1
 var fall = Vector3()
+var health = 7
+
+func hit_nightmare():
+	health -= 1
+	print(health)
+	if health <1:
+		queue_free()
 
 func _ready():
 	pass
 	
 func _process(delta):
-	if not is_on_floor():
-		#print("nacho nick hates doritos")
-		fall.y -= gravity * delta
-		move_and_slide(fall, Vector3.UP)
+	pass
 
 func _physics_process(delta):	
 	if follow_player == true:
@@ -26,6 +29,7 @@ func _physics_process(delta):
 			rotation.z = 0
 			translation.z = 0
 			move_and_slide(move_vec * move_speed * delta, Vector3.UP)
+			$Meth/AnimationPlayer.play("ArmatureAction")
 			
 		else:
 			#print("go right")
@@ -35,7 +39,7 @@ func _physics_process(delta):
 			rotation.z = 0
 			#$CapsuleMesh/MeshInstance.rotation_degrees.y = 180
 			move_and_slide(move_vec * move_speed * delta, Vector3.UP)
-		
+			$Meth/AnimationPlayer.play("ArmatureAction")
 		
 #		var pos = player.global_transform.origin
 #		var facing = -global_transform.basis.z

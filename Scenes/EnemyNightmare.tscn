@@ -1,18 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/EnemyNightmare.gd" type="Script" id=1]
+[ext_resource path="res://Blender Models/Meth.glb" type="PackedScene" id=2]
 
 [sub_resource type="CapsuleShape" id=1]
-radius = 1.3
-height = 0.8
 
 [sub_resource type="CapsuleMesh" id=2]
 
 [sub_resource type="PrismMesh" id=3]
 
 [sub_resource type="CylinderShape" id=4]
-radius = 6.0
-height = 1.0
+radius = 29.0
+height = 48.0
 
 [node name="EnemyNightmare" type="KinematicBody"]
 script = ExtResource( 1 )
@@ -23,11 +22,13 @@ shape = SubResource( 1 )
 
 [node name="CapsuleMesh" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.5, 0 )
+visible = false
 mesh = SubResource( 2 )
 material/0 = null
 
 [node name="MeshInstance" type="MeshInstance" parent="CapsuleMesh"]
 transform = Transform( -0.35, 5.96046e-08, -1.33227e-15, -2.23517e-08, -0.56, 4.37114e-08, 9.77026e-16, 4.89567e-08, 0.5, 0, -2, 0 )
+visible = false
 mesh = SubResource( 3 )
 material/0 = null
 
@@ -41,6 +42,11 @@ shape = SubResource( 4 )
 [node name="RayCast" type="RayCast" parent="."]
 transform = Transform( 1, 0, -1.42109e-14, 0, 1, 0, 1.42109e-14, 0, 1, 0, 0, 0 )
 cast_to = Vector3( 0, 0, 10 )
+
+[node name="Meth" parent="." instance=ExtResource( 2 )]
+transform = Transform( -5.24537e-08, 0, -1.2, 0, 1.2, 0, 1.2, 0, -5.24537e-08, 0.029505, 1.98683, 0.18234 )
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Meth"]
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]
