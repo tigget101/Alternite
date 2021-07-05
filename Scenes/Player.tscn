@@ -28,6 +28,11 @@ transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 1, 0
 mesh = SubResource( 2 )
 material/0 = null
 
+[node name="HitScan" type="RayCast" parent="CapsuleMesh"]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 1, 0, 0 )
+enabled = true
+cast_to = Vector3( 10, 0, 0 )
+
 [node name="PointDirection" type="MeshInstance" parent="CapsuleMesh"]
 transform = Transform( 1.19249e-08, 1, 0, -1, 1.19249e-08, 0, 0, 0, 1, 1, 0, 0 )
 mesh = SubResource( 3 )
@@ -37,11 +42,6 @@ material/0 = null
 transform = Transform( 1, 1.62921e-07, 5.56363e-08, -5.56363e-08, -1.94282e-15, 1, 1.62921e-07, -1, 7.1215e-15, 1.90732e-07, -0.666667, 1.78814e-07 )
 
 [node name="ProjectileTimer" type="Timer" parent="."]
-
-[node name="HitScan" type="RayCast" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0 )
-enabled = true
-cast_to = Vector3( 10, 0, 0 )
 
 [node name="Area" type="Area" parent="."]
 transform = Transform( 3.33333, 0, 0, 0, 3.33333, 0, 0, 0, 3.33333, 0, 0, 0 )

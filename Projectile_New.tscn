@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Blender Models/projectile+trail.glb" type="PackedScene" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.890196, 0.901961, 0.501961, 1 )
+emission_enabled = true
+emission = Color( 0.807843, 0.811765, 0.301961, 1 )
+emission_energy = 1.0
+emission_operator = 0
+emission_on_uv2 = false
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.827451, 0.843137, 0.560784, 1 )
+emission_enabled = true
+emission = Color( 0.741176, 0.694118, 0.286275, 1 )
+emission_energy = 1.0
+emission_operator = 0
+emission_on_uv2 = false
+
+[sub_resource type="CubeMesh" id=3]
+material = SubResource( 2 )
+size = Vector3( 0.1, 0.1, 0.05 )
+
+[node name="New" instance=ExtResource( 1 )]
+
+[node name="Light" parent="." index="0"]
+visible = false
+
+[node name="Camera" parent="." index="1"]
+visible = false
+
+[node name="Sphere" parent="." index="2"]
+material/0 = SubResource( 1 )
+
+[node name="Wind" parent="." index="3"]
+visible = false
+
+[node name="Cube" parent="." index="4"]
+visible = false
+
+[node name="CPUParticles" type="CPUParticles" parent="." index="6"]
+transform = Transform( 0.939693, 0.34202, 9.70853e-08, -1.03316e-07, 1.91069e-15, 1, 0.34202, -0.939693, 3.53361e-08, 0, -2.98023e-08, 1.1 )
+amount = 39
+mesh = SubResource( 3 )
+spread = 31.55
+initial_velocity = 2.0

@@ -44,7 +44,7 @@ func _process(delta):
 		direction -= transform.basis.x
 		$CapsuleMesh.rotation_degrees.y = 180
 		facing = "left"
-	if Input.is_action_pressed("shoot") and can_fire and PlayerStats.has_ammo():
+	if Input.is_action_just_pressed("shoot") and can_fire and PlayerStats.has_ammo():
 		
 		PlayerStats.change_light(-1)
 		check_hit()
@@ -58,7 +58,7 @@ func _process(delta):
 		
 		
 		
-		$ProjectileTimer.set_wait_time(0.5)
+		$ProjectileTimer.set_wait_time(0.35)
 		$ProjectileTimer.start()
 		
 	if PlayerStats.get_life() <= 0:
@@ -74,10 +74,10 @@ func _process(delta):
 
 		
 func check_hit():
-	if $HitScan.is_colliding():
-		print($HitScan.get_collider().filename)
-		if $HitScan.get_collider().filename == "res://Scenes/EnemyNightmare.tscn":
-			$HitScan.get_collider().hit_nightmare()
+	if $CapsuleMesh/HitScan.is_colliding():
+		print($CapsuleMesh/HitScan.get_collider().filename)
+		if $CapsuleMesh/HitScan.get_collider().filename == "res://Scenes/EnemyNightmare.tscn":
+			$CapsuleMesh/HitScan.get_collider().hit_nightmare()
 		
 		
 			
