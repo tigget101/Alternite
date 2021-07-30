@@ -5,7 +5,7 @@ var follow_player = false
 var move_speed = 25
 var move_vec = Vector3.ZERO
 var fall = Vector3()
-var health = 7
+var health = 2
 
 func hit_nightmare():
 	health -= 1

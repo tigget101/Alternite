@@ -12,7 +12,7 @@ font_data = ExtResource( 2 )
 [sub_resource type="ShaderMaterial" id=2]
 
 [sub_resource type="DynamicFont" id=3]
-size = 13
+size = 12
 outline_color = Color( 0.917647, 0.027451, 0.027451, 1 )
 font_data = ExtResource( 4 )
 
@@ -36,12 +36,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="."]
+[node name="New Game" type="Button" parent="."]
 modulate = Color( 0.882353, 0.0588235, 0.0588235, 1 )
 material = SubResource( 2 )
-margin_left = 413.893
+margin_left = 412.893
 margin_top = 178.243
-margin_right = 617.893
+margin_right = 616.893
 margin_bottom = 229.243
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
@@ -50,4 +50,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[node name="Options" type="Button" parent="."]
+modulate = Color( 0.882353, 0.0588235, 0.0588235, 1 )
+material = SubResource( 2 )
+margin_left = 413.0
+margin_top = 250.0
+margin_right = 617.0
+margin_bottom = 301.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+text = "Options"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="New Game" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_Button_pressed"]

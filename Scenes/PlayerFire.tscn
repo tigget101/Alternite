@@ -36,16 +36,18 @@ material/0 = SubResource( 3 )
 [node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 )
 
-[node name="Area" type="Area" parent="."]
-
-[node name="CollisionShape" type="CollisionShape" parent="Area"]
-transform = Transform( 0.226875, 0, 0, 0, 0.23625, -2.51799e-15, 0, 4.15667e-15, 0.39, 0, 0, 1 )
-shape = SubResource( 4 )
-
 [node name="New" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.168683, 0, 0, 0, 0.188541, 0, 0, 0, 0.173209, 0, 0, 1 )
+transform = Transform( -0.312064, 0, -1.37836e-08, 0, 0.352949, 0, 1.27126e-08, 0, -0.295538, 0, 0, 1 )
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="New"]
 
+[node name="Area" type="Area" parent="New"]
+transform = Transform( -5.92828, 0, 2.55005e-07, 0, 5.30389, 0, -2.55005e-07, 0, -5.77337, -2.55005e-07, 0, 5.77337 )
+
+[node name="CollisionShape" type="CollisionShape" parent="New/Area"]
+transform = Transform( 0.226875, 0, 0, 0, 0.23625, -2.51799e-15, -1.58819e-22, 4.15667e-15, 0.39, 0, 0, 1 )
+shape = SubResource( 4 )
+
 [connection signal="body_shape_entered" from="." to="." method="_on_TracerFire_body_shape_entered"]
-[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier" to="." method="_on_VisibilityNotifier_screen_exited"]
+[connection signal="body_entered" from="New/Area" to="." method="_on_Area_body_entered"]

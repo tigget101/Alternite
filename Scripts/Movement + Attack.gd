@@ -3,7 +3,7 @@ extends KinematicBody
 onready var camera = get_parent().get_node("Camera")
 onready var projectile = preload("res://Scenes/PlayerFire.tscn")
 
-export var max_speed = 3.5
+export var max_speed = 2.5
 export var friction = 10
 export var speed = 2.95
 export var acceleration = 10
@@ -37,17 +37,19 @@ func _process(delta):
 
 	if Input.is_action_pressed("ui_right"):
 		direction += transform.basis.x
-		$CapsuleMesh.rotation_degrees.y = 0
-		facing = "right"
+		$Hooman.rotation_degrees.y = 270
+		facing = "left"
+		$Hooman/AnimationPlayer.play("Running")
 		
 	elif Input.is_action_pressed("ui_left"):
 		direction -= transform.basis.x
-		$CapsuleMesh.rotation_degrees.y = 180
-		facing = "left"
+		$Hooman.rotation_degrees.y = 90
+		facing = "right"
+		$Hooman/AnimationPlayer.play("Running")
 	if Input.is_action_just_pressed("shoot") and can_fire and PlayerStats.has_ammo():
 		
 		PlayerStats.change_light(-1)
-		check_hit()
+		#check_hit()
 		
 		can_fire = false
 		var new_projectile = projectile.instance()

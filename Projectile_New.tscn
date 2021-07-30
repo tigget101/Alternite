@@ -39,9 +39,30 @@ visible = false
 [node name="Cube" parent="." index="4"]
 visible = false
 
-[node name="CPUParticles" type="CPUParticles" parent="." index="6"]
-transform = Transform( 0.939693, 0.34202, 9.70853e-08, -1.03316e-07, 1.91069e-15, 1, 0.34202, -0.939693, 3.53361e-08, 0, -2.98023e-08, 1.1 )
-amount = 39
+[node name="CPUParticles2" type="CPUParticles" parent="." index="6"]
+transform = Transform( -7.45058e-08, -1.49012e-07, -1.75, 2.66577, 0.145521, 2.26448e-07, -0.926935, -1.76586, -5.46786e-08, 0, 0, -1.13 )
+amount = 200
+lifetime = 0.76
+preprocess = 0.3
+randomness = 1.0
 mesh = SubResource( 3 )
-spread = 31.55
-initial_velocity = 2.0
+spread = 90.0
+flatness = 1.0
+initial_velocity = 0.5
+angular_velocity = 1.0
+linear_accel = 2.39
+color = Color( 0.341176, 0.141176, 0.141176, 1 )
+
+[node name="CPUParticles12" type="CPUParticles" parent="." index="7"]
+transform = Transform( -6.5294e-09, -5.36497e-09, 1.75, -2.66577, -0.145521, -2.26448e-07, -0.926935, -1.76586, -2.07668e-07, 0, 0, -1.13 )
+amount = 200
+lifetime = 0.76
+preprocess = 0.3
+randomness = 1.0
+mesh = SubResource( 3 )
+spread = 90.0
+flatness = 1.0
+initial_velocity = 0.5
+angular_velocity = 1.0
+linear_accel = 2.39
+color = Color( 0.341176, 0.141176, 0.141176, 1 )
