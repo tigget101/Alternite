@@ -6,7 +6,7 @@ const UP_LEFT = Vector3.UP + Vector3.LEFT
 
 var facing
 onready var velocity = transform.basis.z
-var bullet_speed = 7
+var bullet_speed = 10
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	add_to_group("ignore")

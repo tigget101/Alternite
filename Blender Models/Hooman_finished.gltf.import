@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Hooman.gltf-1e89f3c8cf483575782913a618ee0211.scn"
+path="res://.import/Hooman_finished.gltf-62de80dcb301d2f6cf3adacf244a3081.scn"
 
 [deps]
 
-source_file="res://Blender Models/Hooman.gltf"
-dest_files=[ "res://.import/Hooman.gltf-1e89f3c8cf483575782913a618ee0211.scn" ]
+source_file="res://Blender Models/Hooman_finished.gltf"
+dest_files=[ "res://.import/Hooman_finished.gltf-62de80dcb301d2f6cf3adacf244a3081.scn" ]
 
 [params]
 

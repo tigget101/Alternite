@@ -64,5 +64,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Controls" type="Button" parent="."]
+modulate = Color( 0.882353, 0.0588235, 0.0588235, 1 )
+material = SubResource( 2 )
+margin_left = 413.0
+margin_top = 321.838
+margin_right = 617.0
+margin_bottom = 372.838
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+text = "Controls"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="pressed" from="New Game" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="Options" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_Options_pressed"]

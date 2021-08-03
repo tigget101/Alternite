@@ -37,15 +37,19 @@ func _process(delta):
 
 	if Input.is_action_pressed("ui_right"):
 		direction += transform.basis.x
-		$Hooman.rotation_degrees.y = 270
+		$Hooman_finished.rotation_degrees.y = 270
+		$CapsuleMesh.rotation_degrees.y = 0
 		facing = "left"
-		$Hooman/AnimationPlayer.play("Running")
+		$Hooman_finished/AnimationPlayer.play("Running")
 		
 	elif Input.is_action_pressed("ui_left"):
 		direction -= transform.basis.x
-		$Hooman.rotation_degrees.y = 90
+		$Hooman_finished.rotation_degrees.y = 90
+		$CapsuleMesh.rotation_degrees.y = 180
 		facing = "right"
-		$Hooman/AnimationPlayer.play("Running")
+		$Hooman_finished/AnimationPlayer.play("Running")
+	else:
+		$Hooman_finished/AnimationPlayer.play("Idle")
 	if Input.is_action_just_pressed("shoot") and can_fire and PlayerStats.has_ammo():
 		
 		PlayerStats.change_light(-1)
