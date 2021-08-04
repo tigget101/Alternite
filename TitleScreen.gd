@@ -23,3 +23,11 @@ func _on_Button_pressed():
 
 func _on_Options_pressed():
 	get_tree().change_scene("res://Scenes/Options_menu.tscn")
+
+
+func _on_Controls_pressed():
+	get_tree().change_scene("res://Controls_Menu.tscn")
+
+
+func _on_Secret_button_pressed():
+	get_tree().change_scene("res://Scenes/Secret_Scene.tscn")

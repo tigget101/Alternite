@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Resources/nightmare.jpg" type="Texture" id=1]
 [ext_resource path="res://Resources/Nightmare Pumpkins.otf" type="DynamicFontData" id=2]
@@ -15,6 +15,9 @@ font_data = ExtResource( 2 )
 size = 12
 outline_color = Color( 0.917647, 0.027451, 0.027451, 1 )
 font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+outline_color = Color( 0, 0, 0, 1 )
 
 [node name="Node" type="Node"]
 script = ExtResource( 3 )
@@ -78,5 +81,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Secret_button" type="Button" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 1009.42
+margin_top = 2.57289
+margin_right = 1021.42
+margin_bottom = 11.5729
+custom_fonts/font = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="pressed" from="New Game" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="Controls" to="." method="_on_Controls_pressed"]
+[connection signal="pressed" from="Secret_button" to="." method="_on_Secret_button_pressed"]
