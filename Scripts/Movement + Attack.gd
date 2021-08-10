@@ -3,9 +3,9 @@ extends KinematicBody
 onready var camera = get_parent().get_node("Camera")
 onready var projectile = preload("res://Scenes/PlayerFire.tscn")
 
-export var max_speed = 2.5
-export var friction = 10
-export var speed = 2.95
+export var max_speed = 20
+export var friction = 6
+export var speed = 3
 export var acceleration = 10
 var move_vector = Vector3.ZERO
 var cursor_pos = Vector3.ZERO
@@ -29,9 +29,12 @@ func _process(delta):
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		fall.y = jump
 		jump
+		Sound.play(Sound.jump)
+		
 		
 	if not is_on_floor():
 		fall.y -= gravity * delta
+		
 		
 	direction = Vector3()
 
@@ -60,7 +63,7 @@ func _process(delta):
 		new_projectile.global_transform = $CapsuleMesh/PointDirection/Position3D.global_transform
 		new_projectile.facing = facing
 		get_parent().add_child(new_projectile)
-		
+		Sound.play(Sound.shoot)
 		
 		
 		

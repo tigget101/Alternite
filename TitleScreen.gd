@@ -31,3 +31,7 @@ func _on_Controls_pressed():
 
 func _on_Secret_button_pressed():
 	get_tree().change_scene("res://Scenes/Secret_Scene.tscn")
+
+
+func _on_Exit_pressed():
+	get_tree().quit()

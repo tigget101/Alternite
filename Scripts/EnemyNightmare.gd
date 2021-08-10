@@ -6,11 +6,16 @@ var move_speed = 25
 var move_vec = Vector3.ZERO
 var fall = Vector3()
 var health = 2
+onready var byebye = preload("res://Death_Explosion.tscn")
 
 func hit_nightmare():
 	health -= 1
 	print(health)
 	if health <1:
+		var b = byebye.instance()
+		b.global_transform = global_transform
+		get_parent().add_child(b)
+		b.set_emitting(true)
 		queue_free()
 
 func _ready():

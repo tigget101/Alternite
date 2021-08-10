@@ -55,7 +55,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.54233, 0 )
 shape = SubResource( 4 )
 
 [node name="Hooman_finished" parent="." instance=ExtResource( 2 )]
-transform = Transform( -2.98023e-08, 0, 1, 0, 1, 0, -1, 0, -2.98023e-08, 0, 1.5, 0 )
+transform = Transform( -5.56367e-08, 0, -1, 0, 1, 0, 1, 0, -5.56367e-08, 0, 1.5, 0 )
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Hooman_finished"]
 
