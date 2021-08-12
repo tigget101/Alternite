@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ES_End of Luck - Max Anson.wav-92376c64644497c804e1a150a67b1032.sample"
+
+[deps]
+
+source_file="res://Resources/ES_End of Luck - Max Anson.wav"
+dest_files=[ "res://.import/ES_End of Luck - Max Anson.wav-92376c64644497c804e1a150a67b1032.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

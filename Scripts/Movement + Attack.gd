@@ -29,7 +29,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		fall.y = jump
 		jump
-		Sound.play(Sound.jump)
+		
 		
 		
 	if not is_on_floor():

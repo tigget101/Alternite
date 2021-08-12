@@ -1,7 +1,6 @@
 extends Node
 
 onready var shoot = preload("res://Resources/mixkit-spellcaster-fairy-swoosh-1463.wav")
-onready var jump = preload("res://Resources/mixkit-player-jumping-in-a-video-game-2043.wav")
 onready var falling = preload("res://Resources/mixkit-male-falling-scream-392.wav")
 # Declare member variables here. Examples:
 # var a = 2

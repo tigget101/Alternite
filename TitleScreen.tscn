@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Resources/depositphotos_94195462-stock-illustration-haunted-house-in-foggy-forest.jpg" type="Texture" id=1]
 [ext_resource path="res://Resources/Nightmare Pumpkins.otf" type="DynamicFontData" id=2]
 [ext_resource path="res://TitleScreen.gd" type="Script" id=3]
+[ext_resource path="res://Resources/ES_Barrage - Robert Ruth.wav" type="AudioStream" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -100,6 +101,9 @@ custom_fonts/font = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
 
 [connection signal="pressed" from="New Game" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Options" to="." method="_on_Options_pressed"]
