@@ -17,3 +17,7 @@ extends Node
 
 func _on_Button_pressed():
 	get_tree().quit()
+
+
+func _on_LinkButton_pressed():
+	OS.shell_open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")

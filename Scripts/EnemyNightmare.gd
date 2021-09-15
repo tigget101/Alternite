@@ -12,6 +12,7 @@ func hit_nightmare():
 	health -= 1
 	print(health)
 	if health <1:
+		Sound.play(Sound.squish)
 		var b = byebye.instance()
 		b.global_transform = global_transform
 		get_parent().add_child(b)

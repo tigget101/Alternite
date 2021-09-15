@@ -1,18 +1,38 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Platform1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/GameCamera.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/TempWall.tscn" type="PackedScene" id=4]
 
 [node name="Level1" type="Spatial"]
 
 [node name="Platform" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 0.75, 0, 0, 0 )
 
 [node name="Platform7" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.4, 0, 0, 0, 2, 0, 0, 0, 2, -5.9, 1.4, -0.0999998 )
+transform = Transform( 0.4, 0, 0, 0, 2, 0, 0, 0, 2, -4.8, 1, -0.0999998 )
+
+[node name="Platform8" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.74, 0, 0, 0, 2, 0, 0, 0, 2, -10.2, -1.5, -0.0999998 )
+
+[node name="Platform9" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.74, 0, 0, 0, 2, 0, 0, 0, 2, -15.1, -0.299999, -0.0999998 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 transform = Transform( -0.3, 0, 2.23517e-08, 0, 0.3, 0, -2.23517e-08, 0, -0.3, 0, 0.7, 0 )
 
 [node name="Camera" parent="." instance=ExtResource( 2 )]
-transform = Transform( -1, 7.59039e-09, -8.67587e-08, -2.25406e-08, 0.939693, 0.34202, 8.41226e-08, 0.34202, -0.939693, 0, 1.9, -6.6 )
+transform = Transform( -1, 7.59037e-09, -8.67587e-08, -1.51231e-08, 0.965926, 0.258819, 8.5767e-08, 0.258819, -0.965926, 0, 2, -3.4 )
+
+[node name="TempWall" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.7, 0, 2.3 )
+
+[node name="TempWall3" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.7, -24.8, 2.3 )
+
+[node name="TempWall4" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46, -24.8, 2.3 )
+
+[node name="TempWall2" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 0, 2.3 )

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/mixkit-quick-air-woosh-2605.wav-a41eb89e8360f62bdb59d14b98ca31e6.sample"
+
+[deps]
+
+source_file="res://mixkit-quick-air-woosh-2605.wav"
+dest_files=[ "res://.import/mixkit-quick-air-woosh-2605.wav-a41eb89e8360f62bdb59d14b98ca31e6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
