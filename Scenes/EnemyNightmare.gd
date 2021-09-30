@@ -20,6 +20,7 @@ func hit_nightmare():
 		queue_free()
 
 func _ready():
+	print(rotation_degrees)
 	pass
 	
 func _process(delta):
@@ -31,8 +32,8 @@ func _physics_process(delta):
 			#print ("go left")
 			move_vec.x = -1
 			look_at(player.global_transform.origin, Vector3.UP)
-			rotation.x = 0
-			rotation.z = 0
+			rotation_degrees.y=180
+#			rotation.z = 0
 			translation.z = 0
 			move_and_slide(move_vec * move_speed * delta, Vector3.UP)
 			$Enemy1/AnimationPlayer.play("ArmatureAction")
@@ -41,17 +42,18 @@ func _physics_process(delta):
 			#print("go right")
 			move_vec.x = 1
 			look_at(player.global_transform.origin, Vector3.UP)
-			rotation.x = 0
-			rotation.z = 0
+			rotation_degrees.y=0
+#			rotation.x = 0
+#			rotation.z = 0
 			#$CapsuleMesh/MeshInstance.rotation_degrees.y = 180
 			move_and_slide(move_vec * move_speed * delta, Vector3.UP)
 			$Enemy1/AnimationPlayer.play("ArmatureAction")
 		
-#		var pos = player.global_transform.origin
-#		var facing = -global_transform.basis.z
-#		pos.y = 0
-#		look_at(pos, Vector3.UP)
-#		move_and_slide(facing * move_speed * delta, Vector3.UP)
+			var pos = player.global_transform.origin
+			var facing = -global_transform.basis.z
+			pos.y = 0
+			look_at(pos, Vector3.UP)
+			move_and_slide(facing * move_speed * delta, Vector3.UP)
 		
 
 func _on_Area_body_entered(body):

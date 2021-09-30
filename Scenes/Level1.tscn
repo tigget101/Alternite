@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Platform1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/GameCamera.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/TempWall.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/DeathBlock.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/EnemyNightmare.tscn" type="PackedScene" id=6]
 
 [node name="Level1" type="Spatial"]
 
@@ -17,22 +19,52 @@ transform = Transform( 0.4, 0, 0, 0, 2, 0, 0, 0, 2, -4.8, 1, -0.0999998 )
 transform = Transform( 0.74, 0, 0, 0, 2, 0, 0, 0, 2, -10.2, -1.5, -0.0999998 )
 
 [node name="Platform9" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.74, 0, 0, 0, 2, 0, 0, 0, 2, -15.1, -0.299999, -0.0999998 )
+transform = Transform( 0.74, 0, 0, 0, 2, 0, 0, 0, 2, -13.8, -0.299999, -0.0999998 )
+
+[node name="Platform10" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.74, 0, 0, 0, 2, 0, 0, 0, 2, -17.6, 0.700001, -0.0999998 )
+
+[node name="Platform11" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.74, 0, 0, 0, 2, 0, 0, 0, 2, -20.8, 1.8, -0.0999998 )
+
+[node name="Platform12" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.74, 0, 0, 0, 2, 0, 0, 0, 2, -25, 2.2, -0.0999998 )
+
+[node name="Platform13" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.74, 0, 0, 0, 2, 0, 0, 0, 2, -29, 2.2, -0.0999998 )
+
+[node name="Platform14" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.74, 0, 0, 0, 2, 0, 0, 0, 2, -32.8, 2.8, -0.0999998 )
+
+[node name="Platform15" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.3606, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -37.2, -12, -0.0999998 )
+
+[node name="Platform16" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.3606, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -54.5, -12, -0.0999998 )
+
+[node name="Platform17" parent="." instance=ExtResource( 1 )]
+transform = Transform( 5.42938, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -45.6, -18, -0.0999998 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 transform = Transform( -0.3, 0, 2.23517e-08, 0, 0.3, 0, -2.23517e-08, 0, -0.3, 0, 0.7, 0 )
 
 [node name="Camera" parent="." instance=ExtResource( 2 )]
-transform = Transform( -1, 7.59037e-09, -8.67587e-08, -1.51231e-08, 0.965926, 0.258819, 8.5767e-08, 0.258819, -0.965926, 0, 2, -3.4 )
+transform = Transform( -1, 7.59033e-09, -8.67587e-08, -1.51231e-08, 0.965926, 0.258819, 8.5767e-08, 0.258819, -0.965926, 0, 2, -3.4 )
 
 [node name="TempWall" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.7, 0, 2.3 )
 
 [node name="TempWall3" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.7, -24.8, 2.3 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.7, -23.5, 2.3 )
 
 [node name="TempWall4" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46, -24.8, 2.3 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46, -23.5, 2.3 )
 
 [node name="TempWall2" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 0, 2.3 )
+
+[node name="Area" parent="." instance=ExtResource( 5 )]
+transform = Transform( -25.8018, 0, 0, 0, 1, 0, 0, 0, 2.4, -27.6, -19.8, -0.93 )
+
+[node name="EnemyNightmare" parent="." instance=ExtResource( 6 )]
+transform = Transform( -0.1, 0, 8.74228e-09, 0, 0.1, 0, -8.74228e-09, 0, -0.1, -1.9, 1.1, 0 )
