@@ -37,13 +37,34 @@ transform = Transform( 0.74, 0, 0, 0, 2, 0, 0, 0, 2, -29, 2.2, -0.0999998 )
 transform = Transform( 0.74, 0, 0, 0, 2, 0, 0, 0, 2, -32.8, 2.8, -0.0999998 )
 
 [node name="Platform15" parent="." instance=ExtResource( 1 )]
-transform = Transform( 2.3606, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -37.2, -12, -0.0999998 )
+transform = Transform( 2.3606, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -37.2, -3.4, -0.0999998 )
 
 [node name="Platform16" parent="." instance=ExtResource( 1 )]
-transform = Transform( 2.3606, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -54.5, -12, -0.0999998 )
+transform = Transform( 2.3606, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -46.4, -6.4, -0.0999998 )
 
 [node name="Platform17" parent="." instance=ExtResource( 1 )]
-transform = Transform( 5.42938, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -45.6, -18, -0.0999998 )
+transform = Transform( 2.3606, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -55.9, -10.1, -0.0999998 )
+
+[node name="Platform18" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.3606, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -64.6, -13.7, -0.0999998 )
+
+[node name="Platform19" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.3606, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -73.7, -16.3, -0.0999998 )
+
+[node name="Platform20" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.3606, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -82.8, -15.3, -0.0999998 )
+
+[node name="Platform21" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.3606, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -92.3, -13.7, -0.0999998 )
+
+[node name="Platform22" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.3606, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -102.1, -12.3, -0.0999998 )
+
+[node name="Platform23" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -8.9, 0.4, 1 )
+
+[node name="EnemyNightmare" parent="Platform23" instance=ExtResource( 6 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 32.6188, 3.99091, -5.04545 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 transform = Transform( -0.3, 0, 2.23517e-08, 0, 0.3, 0, -2.23517e-08, 0, -0.3, 0, 0.7, 0 )
@@ -63,8 +84,44 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46, -23.5, 2.3 )
 [node name="TempWall2" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 0, 2.3 )
 
+[node name="TempWall5" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -82.3, 0, 2.3 )
+
+[node name="TempWall6" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -82.3, -23.5, 2.3 )
+
+[node name="TempWall7" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -118.6, -23.5, 2.3 )
+
+[node name="TempWall8" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -118.6, 0, 2.3 )
+
+[node name="TempWall9" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -82.3, 48.28, 2.3 )
+
+[node name="TempWall10" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -82.3, 24.78, 2.3 )
+
+[node name="TempWall11" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -118.6, 24.78, 2.3 )
+
+[node name="TempWall12" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -118.6, 48.28, 2.3 )
+
+[node name="TempWall13" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.26, 48.28, 2.34 )
+
+[node name="TempWall14" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.26, 24.78, 2.34 )
+
+[node name="TempWall15" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.43, 24.78, 2.3 )
+
+[node name="TempWall16" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.56, 48.28, 2.34 )
+
 [node name="Area" parent="." instance=ExtResource( 5 )]
 transform = Transform( -25.8018, 0, 0, 0, 1, 0, 0, 0, 2.4, -27.6, -19.8, -0.93 )
 
-[node name="EnemyNightmare" parent="." instance=ExtResource( 6 )]
-transform = Transform( -0.1, 0, 8.74228e-09, 0, 0.1, 0, -8.74228e-09, 0, -0.1, -1.9, 1.1, 0 )
+[node name="Area2" parent="." instance=ExtResource( 5 )]
+transform = Transform( -25.8018, 0, 0, 0, 1, 0, 0, 0, 2.4, -97, -19.8, -0.93 )

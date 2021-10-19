@@ -21,7 +21,6 @@ radius = 0.5
 height = 0.002
 
 [node name="TracerFire" type="RigidBody"]
-collision_mask = 8
 script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
