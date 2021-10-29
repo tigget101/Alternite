@@ -4,3 +4,6 @@
 
 [node name="Enemy1" instance=ExtResource( 1 )]
 transform = Transform( 0, 0, -1, 0, 1, 0, 1, 0, 0, 0, 0, 0 )
+
+[node name="AnimationPlayer" parent="." index="3"]
+autoplay = "ArmatureAction"

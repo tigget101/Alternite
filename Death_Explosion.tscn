@@ -12,9 +12,10 @@ material = SubResource( 1 )
 size = Vector3( 0.1, 0.1, 0.1 )
 
 [node name="Death_Explosion" type="CPUParticles"]
+transform = Transform( 11.25, 0, 0, 0, 9.3, 0, 0, 0, 247.05, 0, 0, 0 )
 emitting = false
 amount = 30
-lifetime = 1.07
+lifetime = 1.86
 one_shot = true
 explosiveness = 1.0
 mesh = SubResource( 2 )
