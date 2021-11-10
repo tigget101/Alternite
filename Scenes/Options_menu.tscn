@@ -56,4 +56,5 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[connection signal="pressed" from="Toggle_Music" to="." method="_on_Toggle_Music_pressed"]
 [connection signal="pressed" from="Return_to_Menu" to="." method="_on_Return_to_Menu_pressed"]

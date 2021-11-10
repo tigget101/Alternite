@@ -27,10 +27,10 @@ func _physics_process(delta):
 
 func _on_Area_body_entered(body):
 
-	if body.name == "RigidBody":
-		queue_free()
-	elif body.name == "EnemyNightmare":
+	if body.is_in_group("Enemy"):
 		body.hit_nightmare()
+		queue_free()
+	elif body.name == "Player":
 		queue_free()
 	elif body.name == "RigidBody2":
 		queue_free()

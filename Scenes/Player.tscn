@@ -32,18 +32,13 @@ visible = false
 mesh = SubResource( 2 )
 material/0 = null
 
-[node name="HitScan" type="RayCast" parent="CapsuleMesh"]
-transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 1, 0, 0 )
-enabled = true
-cast_to = Vector3( 10, 0, 0 )
-
 [node name="PointDirection" type="MeshInstance" parent="CapsuleMesh"]
 transform = Transform( 1.19249e-08, 1, 0, -1, 1.19249e-08, 0, 0, 0, 1, 1, 0, 0 )
 mesh = SubResource( 3 )
 material/0 = null
 
 [node name="Position3D" type="Position3D" parent="CapsuleMesh/PointDirection"]
-transform = Transform( 1, 1.62921e-07, 5.56363e-08, -5.56363e-08, -1.94282e-15, 1, 1.62921e-07, -1, 7.1215e-15, 3.30206e-07, -1.26667, -0.9 )
+transform = Transform( 1, 1.62921e-07, 5.56363e-08, -5.56363e-08, -1.94282e-15, 1, 1.62921e-07, -1, 7.1215e-15, 1.83577e-07, -0.36667, -0.9 )
 
 [node name="ProjectileTimer" type="Timer" parent="."]
 
@@ -59,6 +54,12 @@ shape = SubResource( 4 )
 transform = Transform( -5.56367e-08, 0, -1, 0, 1, 0, 1, 0, -5.56367e-08, 0, 1.5, 0 )
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Hooman_finished"]
+
+[node name="HitScan" type="RayCast" parent="Hooman_finished"]
+transform = Transform( -5.56367e-08, 0, 1, 0, 1, 0, -1, 0, -5.56367e-08, -5.56367e-08, 0.5, -1 )
+enabled = true
+cast_to = Vector3( 10, 0, 0 )
+collide_with_areas = true
 
 [connection signal="timeout" from="ProjectileTimer" to="." method="_on_ProjectileTimer_timeout"]
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]

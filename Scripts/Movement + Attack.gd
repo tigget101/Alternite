@@ -83,10 +83,10 @@ func _process(delta):
 
 		
 func check_hit():
-	if $CapsuleMesh/HitScan.is_colliding():
-		print($CapsuleMesh/HitScan.get_collider().filename)
-		if $CapsuleMesh/HitScan.get_collider().filename == "res://Scenes/EnemyNightmare.tscn":
-			$CapsuleMesh/HitScan.get_collider().hit_nightmare()
+	if $Hooman_finished/HitScan.is_colliding():
+		print($Hooman_finished/HitScan.get_collider().filename)
+		if $Hooman_finished/HitScan.get_collider().filename == "res://Scenes/EnemyNightmare.tscn":
+			$Hooman_finished/HitScan.get_collider().hit_nightmare()
 		
 		
 			
@@ -133,7 +133,7 @@ func _on_ProjectileTimer_timeout():
 
 
 func _on_Area_body_entered(body):
-	if body.filename == "res://Scenes/EnemyNightmare.tscn":
+	if body.is_in_group("Enemy"):
 		PlayerStats.change_life(-40)
 		
 		

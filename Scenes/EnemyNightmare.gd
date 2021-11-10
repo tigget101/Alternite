@@ -8,16 +8,7 @@ var fall = Vector3()
 var health = 2
 onready var byebye = preload("res://Death_Explosion.tscn")
 
-func hit_nightmare():
-	health -= 1
-	print(health)
-	if health <1:
-		Sound.play(Sound.squish)
-		var b = byebye.instance()
-		b.global_transform = global_transform
-		get_parent().add_child(b)
-		b.set_emitting(true)
-		queue_free()
+
 
 func _ready():
 	print(rotation_degrees)
@@ -35,6 +26,9 @@ func _physics_process(delta):
 			rotation_degrees.y=0
 
 			move_and_slide(move_vec * move_speed * delta, Vector3.UP)
+			#translation.y = 0
+			translation.z = 0
+			
 			$Enemy1/AnimationPlayer.play("ArmatureAction")
 			
 		else:
@@ -44,6 +38,8 @@ func _physics_process(delta):
 			rotation_degrees.y=180
 
 			move_and_slide(move_vec * move_speed * delta, Vector3.UP)
+#			translation.y = 0
+			translation.z = 0
 			$Enemy1/AnimationPlayer.play("ArmatureAction")
 		
 
@@ -57,6 +53,17 @@ func _on_Area_body_entered(body):
 		#print("found player")
 		follow_player = true
 		player = body
+	
+func hit_nightmare():
+	health -= 1
+	print(health)
+	if health <1:
+		Sound.play(Sound.squish)
+		var b = byebye.instance()
+		b.global_transform = global_transform
+		get_parent().add_child(b)
+		b.set_emitting(true)
+		queue_free()
 
 
 func _on_Area_body_exited(body):

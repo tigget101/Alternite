@@ -1,7 +1,108 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Platform1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/TempWall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/GameCamera.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/DeathBlock.tscn" type="PackedScene" id=5]
 
 [node name="Level_2" type="Spatial"]
 
 [node name="Platform" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 63.07, 0 )
+
+[node name="Platform2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 6.3, 64.17, 0 )
+
+[node name="Platform3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 13.9, 61.17, 0 )
+
+[node name="Platform4" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 20.2, 62.27, 0 )
+
+[node name="Platform5" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 26.8, 63.27, 0 )
+
+[node name="Platform6" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 33.7, 61.87, 0 )
+
+[node name="Platform7" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 40.5, 60.47, 0 )
+
+[node name="Platform8" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 47.5, 61.57, 0 )
+
+[node name="Platform9" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 53.7, 62.67, 0 )
+
+[node name="Platform10" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 60.1, 63.67, 0 )
+
+[node name="Platform11" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 66.6, 64.77, 0 )
+
+[node name="Platform12" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 73, 65.67, 0 )
+
+[node name="Platform13" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 80.2, 64.57, -0.6 )
+
+[node name="Platform14" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 87.12, 62.37, 0 )
+
+[node name="TempWall" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.47, -3.4 )
+
+[node name="TempWall2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35.8, 6.47, -3.4 )
+
+[node name="TempWall3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.07, 31.13, -3.4 )
+
+[node name="TempWall4" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0200005, 31.13, -3.4 )
+
+[node name="TempWall5" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 71.9, 6.47, -3.4 )
+
+[node name="TempWall6" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 107.7, 6.47, -3.4 )
+
+[node name="TempWall7" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 107.7, 31.13, -3.4 )
+
+[node name="TempWall8" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 71.88, 31.13, -3.4 )
+
+[node name="TempWall9" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 71.9, 55.62, -3.4 )
+
+[node name="TempWall10" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 107.7, 55.62, -3.4 )
+
+[node name="TempWall11" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 107.7, 80.28, -3.4 )
+
+[node name="TempWall12" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 71.88, 80.28, -3.4 )
+
+[node name="TempWall13" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.320005, 55.62, -3.4 )
+
+[node name="TempWall14" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.12, 55.62, -3.4 )
+
+[node name="TempWall15" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.12, 80.28, -3.4 )
+
+[node name="TempWall16" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.300001, 80.28, -3.4 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.3, 0, 5.24538e-08, 0, 0.3, 0, -5.24538e-08, 0, 0.3, 0, 7.11, 0 )
+
+[node name="Camera" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, -2.87513e-09, 6.00171e-08, -7.5904e-09, 0.984808, 0.173648, -5.96046e-08, -0.173648, 0.984808, 0.0999999, 64.9, 2.8 )
+
+[node name="Area" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1.50647e+07, 0, 0, 0, 1, 0, 0, 0, 1, 42.7, 0, 0 )
